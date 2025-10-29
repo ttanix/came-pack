@@ -9,62 +9,72 @@
   <body>
     <header>
       <div class="container">
-        <nav>
-          <a href="/">
-            <img src="./images/logo.svg" alt="Логотип Beauty Zone" />
-          </a>
-          <ul>
-            <li>
-              <a class="header-link" href="#information-section">Про нас</a>
-            </li>
-            <li>
-              <a class="header-link" href="#advantages-section">Чому ми</a>
-            </li>
-            <li>
-              <a class="header-link" href="#procedures-section">
-                Наші процедури
-              </a>
-            </li>
-            <li>
-              <a class="header-link" href="#contacts-section">Контакти</a>
-            </li>
-          </ul>
-          <!-- <ul>
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
-          </ul> -->
-        </nav>
+        <div class="header-container">
+          <nav class="header-nav">
+            <a href="/">
+              <img src="./images/logo.svg" alt="Логотип Beauty Zone" />
+            </a>
+            <ul class="header-menu">
+              <li>
+                <a class="header-link" href="#information-section">Про нас</a>
+              </li>
+              <li>
+                <a class="header-link" href="#advantages-section">Чому ми</a>
+              </li>
+              <li>
+                <a class="header-link" href="#procedures-section">
+                  Наші процедури
+                </a>
+              </li>
+              <li>
+                <a class="header-link" href="#contacts-section">Контакти</a>
+              </li>
+            </ul>
+            <ul class="header-icon">
+              <li><a href="#">fff</a></li>
+              <li><a href="#">fff</a></li>
+              <li><a href="#">fff</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
       <section class="hero-section">
         <div class="container">
-          <p class="hero-text">Косметологічна клініка</p>
-          <h1 class="hero-title">Beauty zone</h1>
-          <button class="button" type="button">Замовити дзвінок</button>
-          <p class="hero-subtext">
-            Запишись та отримай безкоштовну консультацію нашого косметолога
-          </p>
+          <div class="hero-container">
+            <p class="hero-text">Косметологічна клініка</p>
+            <h1 class="hero-title">Beauty zone</h1>
+            <button class="button" type="button">Замовити дзвінок</button>
+            <p class="hero-subtext">
+              Запишись та отримай безкоштовну консультацію нашого косметолога
+            </p>
+          </div>
         </div>
       </section>
       <section class="information-section section" id="information-section">
         <div class="container">
-          <h2 class="information-title section-title">
-            Перевтілюйтесь в <span class="accent">Beauty Zone!</span>
-          </h2>
-          <p class="information-text">
-            Наша косметологічна клініка пропонує вам професійні послуги з
-            догляду за шкірою обличчя та тіла.
-          </p>
-          <p class="information-text">
-            B <span class="brand-accent">beauty zone</span> ми гарантуємо
-            найвищі стандарти якості та приємний сервіс. Наші косметологічні
-            процедури та препарати допоможуть вам підтримувати свою красу та
-            молодість. З нами краса назавжди!
-          </p>
-          <img src="./images/woman-before.jpg" alt="Жінка до процедур" />
-          <img src="./images/woman-after.jpg" alt="Жінка після процедур" />
+          <div class="information-container">
+            <div class="information-content">
+              <h2 class="information-title section-title">
+                Перевтілюйтесь в <span class="accent">Beauty Zone!</span>
+              </h2>
+              <p class="information-text">
+                Наша косметологічна клініка пропонує вам професійні послуги з
+                догляду за шкірою обличчя та тіла.
+              </p>
+              <p class="information-text">
+                B <span class="brand-accent">beauty zone</span> ми гарантуємо
+                найвищі стандарти якості та приємний сервіс. Наші косметологічні
+                процедури та препарати допоможуть вам підтримувати свою красу та
+                молодість. <br />З нами краса назавжди!
+              </p>
+            </div>
+            <div>
+              <img src="./images/woman-before.jpg" alt="Жінка до процедур" />
+              <img src="./images/woman-after.jpg" alt="Жінка після процедур" />
+            </div>
+          </div>
         </div>
       </section>
       <section class="advantages-section section" id="advantages-section">
@@ -72,9 +82,9 @@
           <h2 class="section-title">
             Чому люди <span class="accent">обирають нас</span>
           </h2>
-          <ul>
-            <li>
-              <article>
+          <ul class="advantages-list">
+            <li class="advantages-item">
+              <article class="advantages-card">
                 <!-- icon -->
                 <p class="advantages-text">
                   Всі наші косметологи мають вищу медичну освіту та стаж роботи
@@ -82,8 +92,8 @@
                 </p>
               </article>
             </li>
-            <li>
-              <article>
+            <li class="advantages-item">
+              <article class="advantages-card">
                 <!-- icon -->
                 <p class="advantages-text">
                   Використовуємо тільки професійне обладнання та косметику,
@@ -91,8 +101,8 @@
                 </p>
               </article>
             </li>
-            <li>
-              <article>
+            <li class="advantages-item">
+              <article class="advantages-card">
                 <!-- icon -->
                 <p class="advantages-text">
                   Наша мета - підкреслити переваги та приховати недоліки, а не
@@ -108,19 +118,19 @@
           <h2 class="section-title">
             Наші <span class="accent">процедури</span>
           </h2>
-          <ul>
-            <li>
-              <article>
+          <ul class="procedures-list">
+            <li class="procedure-item">
+              <article class="procedure-card">
                 <h3 class="procedure-card-title">Маски для обличчя</h3>
               </article>
             </li>
-            <li>
-              <article>
+            <li class="procedure-item">
+              <article class="procedure-card">
                 <h3 class="procedure-card-title">Ін'єкції для обличчя</h3>
               </article>
             </li>
-            <li>
-              <article>
+            <li class="procedure-item">
+              <article class="procedure-card">
                 <h3 class="procedure-card-title">Очищення обличчя</h3>
               </article>
             </li>

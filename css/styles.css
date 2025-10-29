@@ -71,6 +71,8 @@ address {
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -122,9 +124,45 @@ ul {
   font-weight: 700;
 }
 
+/* Header section */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 240px;
+  padding: 32px 0;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 56px;
+}
+
+.header-icon {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 32px;
+}
+
 /* Hero section */
 .hero-section {
   padding: 160px 0 244px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 530px;
 }
 
 .hero-text {
@@ -137,6 +175,7 @@ ul {
   font-family: 'Play', sans-serif;
   font-size: 140px;
   font-weight: 700;
+  /* max-width: 530px; */
   line-height: 0.8;
   text-transform: capitalize;
 }
@@ -146,6 +185,8 @@ ul {
   color: var(--color-secondary-dark);
   text-align: center;
   font-size: 12px;
+  width: 238px;
+  line-height: 1.6;
 }
 
 /* Title section */
@@ -166,6 +207,16 @@ ul {
   padding: 20px 0 88px;
 }
 
+.information-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.information-content {
+  max-width: 710px;
+}
+
 .information-title {
   margin-bottom: 40px;
   text-align: left;
@@ -182,9 +233,23 @@ ul {
   text-transform: capitalize;
 }
 
+.information-text:last-child {
+  margin-bottom: 0;
+}
+
 /* Advantages section */
 .advantages-section {
   padding-top: 88px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+
+.advantages-item {
+  flex-basis: calc((100% - 112px) / 3);
 }
 
 .advantages-text {
@@ -193,7 +258,28 @@ ul {
   line-height: 1.3;
 }
 
+.advantages-card {
+  border-radius: 32px;
+  border: 1px solid black; /*remove*/
+  padding: 24px 32px;
+}
+
 /* Procedures section */
+.procedures-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.procedure-item {
+  flex-basis: calc((100% - 32px) / 3);
+}
+
+.procedure-card {
+  border-radius: 120px 4px 120px 4px; /*remove*/
+  border: 1px solid black;
+}
+
 .procedure-card-title {
   color: var(--color-text-light);
   text-align: center;
