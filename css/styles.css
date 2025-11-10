@@ -156,6 +156,10 @@ ul {
 /* Hero section */
 .hero-section {
   padding: 160px 0 244px;
+  background-image: url('../images/hero-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 .hero-container {
@@ -214,10 +218,11 @@ ul {
 }
 
 .information-content {
-  max-width: 710px;
+  max-width: 650px;
 }
 
 .information-title {
+  max-width: 530px;
   margin-bottom: 40px;
   text-align: left;
 }
@@ -240,6 +245,11 @@ ul {
 /* Advantages section */
 .advantages-section {
   padding-top: 88px;
+}
+
+.advantages-title {
+  max-width: 442px;
+  margin: 0 auto 48px;
 }
 
 .advantages-list {
@@ -276,7 +286,14 @@ ul {
 }
 
 .procedure-card {
-  border-radius: 120px 4px 120px 4px; /*remove*/
+  border-radius: 120px 4px 120px 4px;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 28, 68, 0) 47%,
+    rgba(1, 28, 68, 0.73) 83%,
+    rgba(1, 28, 68, 1) 99%
+  );
+  height: 456px;
   border: 1px solid black;
 }
 
@@ -288,6 +305,14 @@ ul {
 }
 
 /* Footer */
+.footer {
+  background-color: var(--color-brand-dark);
+  background-image: url('../images/footer-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .address {
   color: var(--color-text-light);
   font-size: 16px;
