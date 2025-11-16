@@ -63,7 +63,9 @@
           <div class="hero-container">
             <p class="hero-text">Косметологічна клініка</p>
             <h1 class="hero-title">Beauty zone</h1>
-            <button class="button" type="button">Замовити дзвінок</button>
+            <button class="button modal-btn-open" type="button">
+              Замовити дзвінок
+            </button>
             <p class="hero-subtext">
               Запишись та отримай безкоштовну консультацію нашого косметолога
             </p>
@@ -113,7 +115,12 @@
         </div>
       </section>
       <section class="advantages-section section" id="advantages-section">
-        <div class="container">
+        <img
+          class="advantages-bg"
+          src="./images/advantages-background.svg"
+          alt=""
+        />
+        <div class="advantages-container container">
           <h2 class="advantages-title section-title">
             Чому люди <span class="accent">обирають нас</span>
           </h2>
@@ -229,7 +236,6 @@
                 <img src="./images/logo.svg" alt="Логотип Beauty Zone" />
               </a>
             </div>
-
             <ul class="footer-menu">
               <li>
                 <a class="footer-link" href="#information-section">Про нас</a>
@@ -300,5 +306,13 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

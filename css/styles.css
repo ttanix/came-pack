@@ -45,8 +45,6 @@
 /* Base */
 body {
   color: var(--color-brand-dark);
-  background-image: url(../images/background.png);
-  background-position: center 1064px;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -143,7 +141,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 240px;
+  gap: 40px;
   flex-grow: 1;
 }
 
@@ -166,6 +164,7 @@ ul {
   justify-content: center;
   align-items: center;
   fill: var(--color-brand-dark);
+  gap: 32px;
 }
 
 .header-icon:hover {
@@ -274,7 +273,26 @@ ul {
 
 /* Advantages section */
 .advantages-section {
+  position: relative;
   padding: 88px 0 48px;
+  overflow: visible;
+}
+
+.advantages-bg {
+  position: absolute;
+  left: 50%;
+  top: -36%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Контент */
+.advantages-container {
+  position: relative;
+  z-index: 1;
 }
 
 .advantages-title {
@@ -392,12 +410,24 @@ ul {
 
 /* Footer */
 .footer {
+  position: relative;
   padding: 56px;
   background-color: var(--color-brand-dark);
   background-image: url('../images/footer-background.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.footer::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  height: 150px;
+  background-image: url(../images/decor-cosmetic.png);
+  background-repeat: no-repeat;
+  content: '';
 }
 
 .footer-container {
@@ -441,4 +471,38 @@ ul {
 .address-copyright {
   color: var(--color-secondary-light);
   font-size: 13px;
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 720px;
+  height: 680px;
+  background-color: var(--color-brand-dark);
+  background-image: url(../images/modal-backgrount.png);
+  border-radius: 48px;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 42px;
+  right: 42px;
 }
