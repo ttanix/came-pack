@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <div class="header-container">
           <nav class="header-nav">
@@ -92,21 +92,21 @@
             </div>
             <div class="information-media">
               <img
-                class="information-section-photo"
+                class="information-section-photo before"
                 src="./images/woman-before.jpg"
                 alt="Жінка до процедур"
               />
-              <svg class="information-icon" width="64" height="64">
+              <svg class="information-star big" width="64" height="64">
                 <use href="./images/icons.svg#icon-Star-3"></use>
               </svg>
-              <svg class="information-icon" width="40" height="40">
+              <svg class="information-star medium" width="40" height="40">
                 <use href="./images/icons.svg#icon-Star-2"></use>
               </svg>
-              <svg class="information-icon" width="16" height="16">
+              <svg class="information-star small" width="16" height="16">
                 <use href="./images/icons.svg#icon-Star-1"></use>
               </svg>
               <img
-                class="information-section-photo"
+                class="information-section-photo after"
                 src="./images/woman-after.jpg"
                 alt="Жінка після процедур"
               />
@@ -191,7 +191,7 @@
                 </article>
               </li>
             </ul>
-            <button class="carousel-button" type="button">
+            <button class="carousel-button next" type="button">
               <svg width="16" height="16">
                 <use href="./images/icons.svg#icon-Arrow"></use>
               </svg>
@@ -307,7 +307,7 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
       </div>

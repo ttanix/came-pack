@@ -114,6 +114,7 @@ ul {
 .header-link {
   text-decoration: none;
   color: var(--color-brand-dark);
+  transition: color 0.3s;
 }
 
 .header-link:hover {
@@ -123,6 +124,7 @@ ul {
 .footer-link {
   color: var(--color-text-light);
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-link:hover {
@@ -130,10 +132,19 @@ ul {
 }
 
 /* Header section */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
 .header-container {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 240px;
   padding: 32px 0;
 }
 
@@ -141,7 +152,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 240px;
   flex-grow: 1;
 }
 
@@ -231,7 +242,7 @@ ul {
 .information-container {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 32px;
 }
 
 .information-content {
@@ -262,13 +273,87 @@ ul {
 .information-media {
   display: flex;
   flex-direction: column;
+  position: relative;
   flex-grow: 1;
+  width: 100%;
+  max-width: 500px;
 }
 
 .information-section-photo {
+  position: absolute;
   border-radius: 50%;
   width: 327px;
   height: 327px;
+}
+
+.information-section-photo.before {
+  top: -84px;
+  left: -24px;
+}
+
+.information-section-photo.after {
+  bottom: -72px;
+  right: -67px;
+}
+
+.information-star {
+  position: absolute;
+}
+
+.information-star.big {
+  fill: var(--color-brand-dark);
+  top: 66%;
+  left: 21%;
+  animation: 3s ease-in-out 0s infinite normal none running star-movement,
+    6s linear 0s infinite normal none running star-rotation;
+}
+
+.information-star.medium {
+  fill: var(--color-brand-light);
+  top: -12%;
+  right: -5%;
+  animation: 4s ease-in-out 0s infinite normal none running star-movement,
+    5s linear 0s infinite reverse none running star-rotation;
+}
+
+.information-star.small {
+  fill: var(--color-secondary-light);
+  top: 30%;
+  right: 12%;
+  animation: 2s ease-in-out 0s infinite normal none running star-movement,
+    3s linear 0s infinite normal none running star-rotation;
+}
+
+@keyframes star-movement {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translate(10px, -10px) scale(1.1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(-15px, 5px) scale(1.3);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(10px, 15px) scale(1.2);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes star-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Advantages section */
@@ -281,15 +366,14 @@ ul {
 .advantages-bg {
   position: absolute;
   left: 50%;
-  top: -36%;
+  top: -12%;
   transform: translateX(-50%);
-  width: 150%;
-  height: auto;
+  width: 100%;
+  height: max-content;
   z-index: -1;
   pointer-events: none;
 }
 
-/* Контент */
 .advantages-container {
   position: relative;
   z-index: 1;
@@ -351,7 +435,7 @@ ul {
 }
 
 .procedure-card {
-  border-radius: 120px 4px 120px 4px;
+  border-radius: 4px 120px 4px 120px;
   padding: 77px;
   background: linear-gradient(
     180deg,
@@ -361,6 +445,15 @@ ul {
   );
   height: 456px;
   border: 1px solid black;
+  transition: transform 0.3s;
+}
+
+.procedure-card:hover {
+  transform: scale(1.05);
+}
+
+.carousel-button.next {
+  transform: rotate(180deg);
 }
 
 .procedure-card-title {
@@ -460,12 +553,18 @@ ul {
   text-decoration: none;
 }
 
+.address:hover {
+  color: var(--color-brand-light);
+  transition: color 0.3s;
+}
+
 .address-icon {
   fill: var(--color-text-light);
 }
 
 .address-icon:hover {
   fill: var(--color-brand-light);
+  transition: fill 0.3s;
 }
 
 .address-copyright {
@@ -482,8 +581,10 @@ ul {
   bottom: 0;
   display: flex;
   justify-content: center;
+  padding: 20px 0;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
 .backdrop.is-hidden {
@@ -494,8 +595,10 @@ ul {
 
 .modal {
   position: relative;
-  width: 720px;
-  height: 680px;
+  width: 100%;
+  max-width: 720px;
+  height: 100%;
+  max-height: 680px;
   background-color: var(--color-brand-dark);
   background-image: url(../images/modal-backgrount.png);
   border-radius: 48px;
