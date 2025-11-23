@@ -216,11 +216,12 @@
             ></iframe>
             <div class="contact-form">
               <h3 class="contact-form-title">
-                Запишіться <span class="modal-accent">безкоштовно</span> та
-                отримайте подарунок
+                Запишіться
+                <span class="contact-free">безкоштовно</span> та отримайте
+                подарунок
               </h3>
-              <form name="contact-form" autocomplete="off" novalidate>
-                <div class="form-field">
+              <form name="contact-form" autocomplete="off">
+                <div class="contact-form-field">
                   <label class="form-label visually-hidden" for="user-name">
                     Ваше ім'я та прізвище
                   </label>
@@ -230,23 +231,27 @@
                     name="user-name"
                     id="user-name"
                     placeholder="Ваше ім'я та прізвище"
+                    required
+                    pattern="^[Є-ЯҐа-їґ]+\s[Є-ЯҐа-їґ]+$"
                   />
                 </div>
 
-                <div class="form-field">
-                  <label class="form-label visually-hidden" for="user-tel"
-                    >Ваш номер телефон</label
-                  >
+                <div class="contact-form-field">
+                  <label class="form-label visually-hidden" for="user-tel">
+                    Ваш номер телефон
+                  </label>
                   <input
                     class="form-input"
                     type="tel"
                     name="user-tel"
                     id="user-tel"
                     placeholder="Ваш номер телефон"
+                    required
+                    pattern="^\+380\d{9}$"
                   />
                 </div>
 
-                <div class="form-field">
+                <div class="contact-form-field">
                   <label class="form-label visually-hidden" for="user-email">
                     Ваша електронна пошта
                   </label>
@@ -361,7 +366,7 @@
           Запишіться <span class="modal-accent">безкоштовно</span> та отримайте
           подарунок
         </p>
-        <form name="modal-form" autocomplete="off" novalidate>
+        <form name="modal-form" autocomplete="off">
           <div class="form-field">
             <label class="form-label visually-hidden" for="user-name">
               Ваше ім'я та прізвище
@@ -372,19 +377,23 @@
               name="user-name"
               id="user-name"
               placeholder="Ваше ім'я та прізвище"
+              required
+              pattern="^[Є-ЯҐа-їґ]+\s[Є-ЯҐа-їґ]+$"
             />
           </div>
 
           <div class="form-field">
-            <label class="form-label visually-hidden" for="user-tel"
-              >Ваш номер телефон</label
-            >
+            <label class="form-label visually-hidden" for="user-tel">
+              Ваш номер телефон
+            </label>
             <input
               class="form-input"
               type="tel"
               name="user-tel"
               id="user-tel"
               placeholder="Ваш номер телефон"
+              required
+              pattern="^\+380\d{9}$"
             />
           </div>
 
@@ -398,6 +407,7 @@
               name="user-email"
               id="user-email"
               placeholder="Ваша електронна пошта"
+              required
             />
           </div>
           <button class="form-button button" type="submit">
