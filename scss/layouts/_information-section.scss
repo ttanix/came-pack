@@ -1,0 +1,83 @@
+.information-section {
+  padding: 20px 0 88px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__content {
+    max-width: 652px;
+  }
+
+  &__title {
+    max-width: 530px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  &__text {
+    color: var(--color-brand-dark);
+    font-size: 22px;
+    line-height: 1.7;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__media {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  &__photo {
+    position: absolute;
+    border-radius: 50%;
+    width: 327px;
+    height: 327px;
+
+    &--before {
+      top: -84px;
+      left: -24px;
+    }
+
+    &--after {
+      bottom: -72px;
+      right: -67px;
+    }
+  }
+
+  &__star {
+    position: absolute;
+
+    &--big {
+      fill: var(--color-brand-dark);
+      top: 66%;
+      left: 21%;
+      animation: 3s ease-in-out 0s infinite normal none running star-movement,
+        6s linear 0s infinite normal none running star-rotation;
+    }
+
+    &--medium {
+      fill: var(--color-brand-light);
+      top: -12%;
+      right: -5%;
+      animation: 4s ease-in-out 0s infinite normal none running star-movement,
+        5s linear 0s infinite reverse none running star-rotation;
+    }
+
+    &--small {
+      fill: var(--color-secondary-light);
+      top: 30%;
+      right: 12%;
+      animation: 2s ease-in-out 0s infinite normal none running star-movement,
+        3s linear 0s infinite normal none running star-rotation;
+    }
+  }
+}

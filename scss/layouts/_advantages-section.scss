@@ -1,0 +1,37 @@
+.advantages-section {
+  position: relative;
+  padding: 88px 0 48px;
+  overflow: visible;
+
+  &__background {
+    position: absolute;
+    left: 50%;
+    top: -12%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: max-content;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    max-width: 442px;
+    margin: 0 auto 48px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__item {
+    flex-grow: 1;
+    max-width: 316px;
+  }
+}
